@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Huevos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Recaudo de Huevos</h1>
+        <form id="huevosForm">
+            <div class="form-group">
+                <label for="turno">Seleccione Turno:</label>
+                <select id="turno">
+                    <option value="1">Turno 1</option>
+                    <option value="2">Turno 2</option>
+                </select>
+            </div>
+            <div id="turno1" class="turno-form">
+                <h2>Recolección Turno 1</h2>
+                <label for="r1">Huevos Rojos Tipo 1:</label>
+                <input type="number" id="r1" placeholder="Cantidad de Rojos Tipo 1">
+                <label for="r2">Huevos Rojos Tipo 2:</label>
+                <input type="number" id="r2" placeholder="Cantidad de Rojos Tipo 2">
+                <label for="b1">Huevos Blancos Tipo 1:</label>
+                <input type="number" id="b1" placeholder="Cantidad de Blancos Tipo 1">
+                <label for="b2">Huevos Blancos Tipo 2:</label>
+                <input type="number" id="b2" placeholder="Cantidad de Blancos Tipo 2">
+            </div>
+            <div id="turno2" class="turno-form" style="display:none;">
+                <h2>Recolección Turno 2</h2>
+                <label for="x1">Huevos Rojos Tipo 1:</label>
+                <input type="number" id="x1" placeholder="Cantidad de Rojos Tipo 1">
+                <label for="x2">Huevos Rojos Tipo 2:</label>
+                <input type="number" id="x2" placeholder="Cantidad de Rojos Tipo 2">
+                <label for="y1">Huevos Blancos Tipo 1:</label>
+                <input type="number" id="y1" placeholder="Cantidad de Blancos Tipo 1">
+                <label for="y2">Huevos Blancos Tipo 2:</label>
+                <input type="number" id="y2" placeholder="Cantidad de Blancos Tipo 2">
+            </div>
+        </form>
+        <button onclick="calcularRecaudo()">Calcular Recaudo</button>
+        <div id="resultado"></div>
+        <button id="otroTurnoBtn" style="display:none;" onclick="resetForm()">Calcular Otro Turno</button>
+        <button id="finalizarBtn" style="display:none;" onclick="finalizarProceso()">Finalizar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
